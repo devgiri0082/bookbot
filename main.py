@@ -24,8 +24,7 @@ def countChar(content):
   charDict = {}
   for char in content:
     char_lower = char.lower()
-    char_int = ord(char_lower)
-    if char_int < 97 or char_int > 122: continue
+    if not char_lower.isalpha(): continue
     if char_lower in charDict:
       charDict[char_lower] += 1
     else:
